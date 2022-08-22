@@ -1,0 +1,12 @@
+{
+  "action": {
+    "send": "Отправить",
+    "save": "Сохранить"
+  },
+  "label": {
+    "version": "Версия"
+  },
+  "message": {
+    "deleteSuccess": "Успешно удалено!"
+  }
+}

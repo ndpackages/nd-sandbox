@@ -1,0 +1,12 @@
+{
+  "action": {
+    "send": "Send",
+    "save": "Save"
+  },
+  "label": {
+    "version": "Version"
+  },
+  "message": {
+    "deleteSuccess": "Successfully removed!"
+  }
+}

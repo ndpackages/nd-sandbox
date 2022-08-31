@@ -1,4 +1,4 @@
-import AesDataEntity from "../../../aes/domain/entities/AesDataEntity";
+import AesDataEntity from "../../../../bundles/aes/domain/entities/AesDataEntity";
 import CryptoJS from "crypto-js";
 import ConvHelper from "../../../core/helpers/encoders/ConvHelper";
 import AssertHelper from "../../../core/helpers/AssertHelper";

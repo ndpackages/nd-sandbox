@@ -1,5 +1,5 @@
 import BaseComponent from "./BaseComponent";
-import breadcrumbFacade from "../../breadcrumb/domain/facades/breadcrumbFacade";
+import breadcrumbFacade from "../../../bundles/breadcrumb/domain/facades/breadcrumbFacade";
 
 export default class BaseActiveComponent extends BaseComponent {
 

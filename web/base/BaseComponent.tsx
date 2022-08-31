@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import container from "../../container/singletons/container";
-import breadcrumbFacade from "../../breadcrumb/domain/facades/breadcrumbFacade";
-import Loader from "../../loader/web/widget/loader";
+import breadcrumbFacade from "../../../bundles/breadcrumb/domain/facades/breadcrumbFacade";
+import Loader from "../../../bundles/loader/web/widget/loader";
 import pageHead from "../singletons/pageHead";
 import _ from "lodash"
 

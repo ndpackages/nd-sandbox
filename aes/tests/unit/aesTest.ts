@@ -1,8 +1,8 @@
-import AesDataEntity from "../../../aes/domain/entities/AesDataEntity";
+import AesDataEntity from "../../domain/entities/AesDataEntity";
 import tester from "../../../../tool/test/domain/libs/tester";
 import assert from "../../../../tool/test/domain/libs/assert";
 import ConvHelper from "../../../core/helpers/encoders/ConvHelper";
-import AesEncryption from "../../../aes/domain/libs/AesEncryption";
+import AesEncryption from "../../domain/libs/AesEncryption";
 import HexHelper from "../../../core/helpers/encoders/HexHelper";
 
 let aesjs = require('aes-js');

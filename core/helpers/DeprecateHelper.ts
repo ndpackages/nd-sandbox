@@ -1,5 +1,5 @@
-import DeprecatedError from "../../contract/errors/DeprecatedError";
-import configManager from "../../configManager/singletons/configManager";
+import DeprecatedError from "../../../bundlesCore/contract/errors/DeprecatedError";
+import configManager from "../../../bundlesCore/configManager/singletons/configManager";
 
 export default class DeprecateHelper {
 

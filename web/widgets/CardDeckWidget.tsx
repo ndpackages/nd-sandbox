@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from "lodash";
-import DataProvider from "../../domain/libs/DataProvider";
+import DataProvider from "../../../bundlesCore/domain/libs/DataProvider";
 
 export default function CardDeckWidget(props) {
     let ItemRender = props.itemRender;

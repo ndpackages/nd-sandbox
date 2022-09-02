@@ -1,5 +1,5 @@
 import BaseCrudComponent from "./BaseCrudComponent";
-import Query from "../../domain/libs/Query";
+import Query from "../../../bundlesCore/domain/libs/Query";
 import {t} from "i18next";
 import {toast} from "react-toastify";
 import {Facebook} from "react-content-loader";

@@ -1,4 +1,4 @@
-import DataProvider from "../../domain/libs/DataProvider";
+import DataProvider from "../../../bundlesCore/domain/libs/DataProvider";
 import UrlHelper from "../../core/helpers/UrlHelper";
 import ArrayNestedHelper from "../../core/helpers/encoders/ArrayNestedHelper";
 

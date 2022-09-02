@@ -1,4 +1,4 @@
-import UnprocessableEntityError from "../../contract/errors/UnprocessableEntityError";
+import UnprocessableEntityError from "../../../bundlesCore/contract/errors/UnprocessableEntityError";
 import _ from "lodash";
 
 export default class FormHelper {

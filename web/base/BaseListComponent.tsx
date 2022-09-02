@@ -1,13 +1,13 @@
 import BaseCrudComponent from "./BaseCrudComponent";
-import Query from "../../domain/libs/Query";
+import Query from "../../../bundlesCore/domain/libs/Query";
 import {t} from "i18next";
 import {toast} from "react-toastify";
 import {List} from "react-content-loader";
 import React from "react";
 import EmptyList from "../components/emptyList";
-import DataProvider from "../../domain/libs/DataProvider";
+import DataProvider from "../../../bundlesCore/domain/libs/DataProvider";
 import {Col} from "react-bootstrap";
-import QueryHelper from "../../domain/helpers/QueryHelper";
+import QueryHelper from "../../../bundlesCore/domain/helpers/QueryHelper";
 
 export default abstract class BaseListComponent extends BaseCrudComponent {
 

@@ -1,4 +1,7 @@
-let aesjs = require('aes-js');
+import DeprecateHelper from "../../../../bundlesExt/tools/helpers/DeprecateHelper";
+import aesjs from 'aes-js';
+
+DeprecateHelper.hardThrow();
 
 export default class Utf8Helper {
 

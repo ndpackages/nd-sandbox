@@ -1,4 +1,4 @@
-import Base64Helper from "../../core/helpers/encoders/Base64Helper";
+import Base64Helper from "../../../bundlesExt/baseX/helpers/Base64Helper";
 
 export default class HtmlHelper {
 

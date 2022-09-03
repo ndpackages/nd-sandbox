@@ -1,6 +1,6 @@
 import React from 'react';
 import {Nav} from "react-bootstrap";
-import UrlHelper from "../../../core/helpers/UrlHelper";
+import UrlHelper from "../../core/helpers/UrlHelper";
 import Item from "../controlledNavs/views/Item";
 
 export default function NavItemsWidget(props) {

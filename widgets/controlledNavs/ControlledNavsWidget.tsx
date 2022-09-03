@@ -1,4 +1,4 @@
-import UrlHelper from "../../../bundlesExt/html/helpers/UrlHelper";
+import UrlHelper from "../../ext/html/helpers/UrlHelper";
 import {Nav} from "react-bootstrap";
 import React from "react";
 import Item from "./views/Item";

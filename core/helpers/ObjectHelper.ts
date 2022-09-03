@@ -4,13 +4,15 @@ export default class ObjectHelper {
 
     static iterate(obj, handler) {
         for (let property in obj) {
-            let value = obj[property];
             if (obj.hasOwnProperty(property)) {
-                let isPlain = _.isPlainObject(value) || _.isArray(value);
-                if (isPlain) {
-                    this.iterate(value, handler);
-                } else {
-                    handler(obj, property);
+                let value = obj[property];
+                if (obj.hasOwnProperty(property)) {
+                    let isPlain = _.isPlainObject(value) || Array.isArray(value);
+                    if (isPlain) {
+                        this.iterate(value, handler);
+                    } else {
+                        handler(obj, property);
+                    }
                 }
             }
         }
@@ -18,8 +20,6 @@ export default class ObjectHelper {
 
     static clone(object) {
         return _.cloneDeep(object);
-        // let json = JSON.stringify(object);
-        // return JSON.parse(json);
     }
 
     static createClassByName(name, ...a) {

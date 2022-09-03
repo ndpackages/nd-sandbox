@@ -4,6 +4,7 @@ import breadcrumbFacade from "../../../bundles/breadcrumb/domain/facades/breadcr
 import Loader from "../../../bundles/loader/web/widget/loader";
 import pageHead from "../../../bundlesExt/pageTitle/singletons/pageTitle";
 import _ from "lodash"
+import RouteHelper from "../helpers/RouteHelper";
 
 export default abstract class BaseComponent extends Component {
 
@@ -61,6 +62,7 @@ export default abstract class BaseComponent extends Component {
         if (uri === null) {
             throw new Error('Empty uri for redirect!');
         }
+        // RouteHelper.redirect(uri);
         this.props['history'].push(uri);
     }
 

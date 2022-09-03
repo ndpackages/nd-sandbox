@@ -63,8 +63,8 @@ export default class BaseXHelper {
         // return this.toBaseX(value, fromFormat, AlphabetEnum.BASE_94);
     }
 
-    static toBaseX(value, fromFormat = undefined, alphabet = undefined) {
+    /*static toBaseX(value, fromFormat = undefined, alphabet = undefined) {
         let baseXEncoder = new BaseXEncoder();
         return baseXEncoder.encode(value, fromFormat, alphabet);
-    }
+    }*/
 }

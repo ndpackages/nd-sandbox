@@ -5,12 +5,6 @@ import ControlledNavsItem from "./ControlledNavsItem";
 
 function ControlledNavs(props) {
     let currentUrl = '/' + UrlHelper.trim(window.location.hash);
-    // console.log(currentUrl);
-    /*const [key, setKey] = useState(currentUrl);
-    const onSelect = (k) => {
-        setKey(k);
-        // console.log(k);
-    };*/
     return (
         <Nav
             className={props.className}

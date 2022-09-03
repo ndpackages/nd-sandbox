@@ -10,5 +10,3 @@ function ImageSliderWidget(props) {
 }
 
 export default ImageSliderWidget;
-
-// https://www.npmjs.com/package/react-image-gallery

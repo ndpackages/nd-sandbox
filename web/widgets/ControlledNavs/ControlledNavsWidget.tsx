@@ -3,7 +3,7 @@ import {Nav} from "react-bootstrap";
 import React from "react";
 import ControlledNavsItem from "./ControlledNavsItem";
 
-function ControlledNavs(props) {
+function ControlledNavsWidget(props) {
     let currentUrl = '/' + UrlHelper.trim(window.location.hash);
     return (
         <Nav
@@ -21,4 +21,4 @@ function ControlledNavs(props) {
     );
 }
 
-export default ControlledNavs;
+export default ControlledNavsWidget;

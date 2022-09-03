@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 import Pagination from "react-bootstrap-4-pagination";
-import UrlHelper from "../../core/helpers/UrlHelper";
+import UrlHelper from "../../../core/helpers/UrlHelper";
 
-export default function Paginator(props) {
+export default function PaginatorWidget(props) {
     let paginationConfig = {
         className: "",
         totalPages: 1,

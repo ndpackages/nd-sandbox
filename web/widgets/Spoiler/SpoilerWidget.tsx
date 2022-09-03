@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Spoiler = (props) => {
+const SpoilerWidget = (props) => {
     const [showResults, setShowResults] = useState(false);
     const onClick = () => {
         setShowResults(!showResults);
@@ -28,4 +28,4 @@ const Spoiler = (props) => {
     )
 };
 
-export default Spoiler;
+export default SpoilerWidget;

@@ -3,7 +3,7 @@ import {Nav} from "react-bootstrap";
 import UrlHelper from "../../core/helpers/UrlHelper";
 import ControlledNavsItem from "../widgets/ControlledNavs/ControlledNavsItem";
 
-export default function EmployeeListView1111(props) {
+export default function NavItems(props) {
 
     let attributeName = props['attributeName'];
     // let value = props['value'];

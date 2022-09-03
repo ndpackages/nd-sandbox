@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav} from "react-bootstrap";
 import UrlHelper from "../../../core/helpers/UrlHelper";
-import ControlledNavsItem from "../ControlledNavs/ControlledNavsItem";
+import ControlledNavsItem from "../controlledNavs/ControlledNavsItem";
 
 export default function NavItemsWidget(props) {
 

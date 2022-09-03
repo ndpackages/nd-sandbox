@@ -1,6 +1,9 @@
 import _ from "lodash";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import DeprecateHelper from "../../../bundlesExt/tools/helpers/DeprecateHelper";
+
+DeprecateHelper.hardThrow();
 
 const FormView = function (uri) {
     const history = useHistory();

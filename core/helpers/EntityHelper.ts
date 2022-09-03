@@ -38,7 +38,6 @@ export default class EntityHelper {
             let match = re.exec(attrName);
             if (match && match.length === 2) {
                 attributes.push(match[1]);
-
             }
         }
         return attributes;

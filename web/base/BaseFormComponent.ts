@@ -1,5 +1,5 @@
 import BaseComponent from "./BaseComponent";
-import FormHelper from "../../core/helpers/FormHelper";
+import FormHelper from "../../../bundlesExt/form/helpers/FormHelper";
 
 export default class BaseFormComponent extends BaseComponent {
 

@@ -4,7 +4,7 @@ import {t} from "i18next";
 import {toast} from "react-toastify";
 import {List} from "react-content-loader";
 import React from "react";
-import EmptyList from "../components/emptyList";
+import EmptyListNotice from "../widgets/notice/emptyListNotice";
 import DataProvider from "../../../bundlesCore/domain/libs/DataProvider";
 import {Col} from "react-bootstrap";
 import QueryHelper from "../../../bundlesCore/domain/helpers/QueryHelper";
@@ -18,7 +18,7 @@ export default abstract class BaseListComponent extends BaseCrudComponent {
     emptyMessageRender() {
         return (
             <Col className="mt-3">
-                <EmptyList/>
+                <EmptyListNotice/>
             </Col>
         );
     }

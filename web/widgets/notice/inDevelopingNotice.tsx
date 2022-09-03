@@ -1,7 +1,7 @@
 import React from 'react';
 import {Alert} from "react-bootstrap";
 
-export default function InDevelopingAlert() {
+export default function InDevelopingNotice() {
     return (
         <Alert variant="warning">
             <Alert.Heading>Страница в разработке</Alert.Heading>

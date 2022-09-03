@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EmptyItem(props) {
+export default function EmptyItemNotice(props) {
     return (
         <div className="alert alert-light" role="alert">
             Empty item

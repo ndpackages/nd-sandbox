@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav} from "react-bootstrap";
 import UrlHelper from "../../../core/helpers/UrlHelper";
-import ControlledNavsItem from "../controlledNavs/ControlledNavsItem";
+import Item from "../controlledNavs/views/Item";
 
 export default function NavItemsWidget(props) {
 
@@ -25,7 +25,7 @@ export default function NavItemsWidget(props) {
                 };
 
                 return (
-                    <ControlledNavsItem
+                    <Item
                         key={entity.id}
                         item={item}
                     />

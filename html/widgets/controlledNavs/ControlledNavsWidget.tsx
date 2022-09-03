@@ -1,7 +1,7 @@
 import UrlHelper from "../../../core/helpers/UrlHelper";
 import {Nav} from "react-bootstrap";
 import React from "react";
-import ControlledNavsItem from "./ControlledNavsItem";
+import Item from "./views/Item";
 
 function ControlledNavsWidget(props) {
     let currentUrl = '/' + UrlHelper.trim(window.location.hash);
@@ -14,7 +14,7 @@ function ControlledNavsWidget(props) {
         >
             {props.collection.map(function (item, index) {
                 return (
-                    <ControlledNavsItem key={index} item={item}/>
+                    <Item key={index} item={item}/>
                 );
             })}
         </Nav>

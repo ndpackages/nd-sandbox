@@ -1,9 +1,9 @@
-import UrlHelper from "../../../core/helpers/UrlHelper";
+import UrlHelper from "../../../../core/helpers/UrlHelper";
 import {Nav} from "react-bootstrap";
 import React from "react";
 import {Link} from "react-router-dom";
 
-function ControlledNavsItem(props) {
+function Item(props) {
     let currentUrl = '/' + UrlHelper.trim(window.location.hash);
     let item = props.item;
 
@@ -24,4 +24,4 @@ function ControlledNavsItem(props) {
     );
 }
 
-export default ControlledNavsItem;
+export default Item;

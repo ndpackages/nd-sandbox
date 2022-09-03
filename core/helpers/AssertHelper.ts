@@ -1,5 +1,5 @@
 import AssertTypeError from "../../../bundlesCore/contract/errors/AssertTypeError";
-import ConvHelper from "./encoders/ConvHelper";
+import ConvHelper from "../../../bundlesExt/binary/helpers/ConvHelper";
 
 export default class AssertHelper {
 

@@ -1,6 +1,6 @@
 import _ from "lodash";
-import ArrayNestedHelper from "./encoders/ArrayNestedHelper";
-import ArrayHelper from "./ArrayHelper";
+import ArrayNestedHelper from "../../core/helpers/encoders/ArrayNestedHelper";
+import ArrayHelper from "../../core/helpers/ArrayHelper";
 import config from "../../../app/common/config/config";
 import RouterTypeEnum from "../../../app/common/domain/enums/RouterTypeEnum";
 

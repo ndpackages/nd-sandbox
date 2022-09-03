@@ -1,5 +1,5 @@
 import DataProvider from "../../../bundlesCore/domain/libs/DataProvider";
-import UrlHelper from "./UrlHelper";
+import UrlHelper from "../../../bundlesExt/html/helpers/UrlHelper";
 import ArrayNestedHelper from "../../../bundlesExt/array/ArrayNestedHelper";
 
 export default class WebHelper {

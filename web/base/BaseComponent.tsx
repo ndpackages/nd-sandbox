@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import container from "../../../bundlesCore/container/singletons/container";
 import breadcrumbFacade from "../../../bundles/breadcrumb/domain/facades/breadcrumbFacade";
 import Loader from "../../../bundles/loader/web/widget/loader";
-import pageHead from "../../html/singletons/pageHead";
+import pageHead from "../../../bundlesExt/pageTitle/singletons/pageTitle";
 import _ from "lodash"
 
 export default abstract class BaseComponent extends Component {

@@ -7,6 +7,9 @@ export default class WebHelper {
     public static getParams(dataProvider: DataProvider) {
         let params = UrlHelper.parseQueryParams(window.location.toString());
         let map = ArrayNestedHelper.decode(params);
+
+        console.log(map);
+
         let values = {
             perPage: 20,
             sort: params.sort ?? '',
@@ -17,6 +20,10 @@ export default class WebHelper {
             values.perPage = dataProvider.paginator.perPage;
         }
         return values;
+    }
+
+    public static getParamsFromLocation() {
+
     }
 
     // public static setPageFavicon(url: string): void {

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {ButtonGroup, ToggleButton} from "react-bootstrap";
 
-function RadioButtons(props) {
+function RadioButtonsWidget(props) {
     // const [checked, setChecked] = useState(false);
     const [radioValue, setRadioValue] = useState('1');
     return (
@@ -23,4 +23,4 @@ function RadioButtons(props) {
     );
 }
 
-export default RadioButtons;
+export default RadioButtonsWidget;

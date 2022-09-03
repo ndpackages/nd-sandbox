@@ -1,9 +1,9 @@
 import React from 'react';
 import {Nav} from "react-bootstrap";
-import UrlHelper from "../../core/helpers/UrlHelper";
-import ControlledNavsItem from "../widgets/ControlledNavs/ControlledNavsItem";
+import UrlHelper from "../../../core/helpers/UrlHelper";
+import ControlledNavsItem from "../ControlledNavs/ControlledNavsItem";
 
-export default function NavItems(props) {
+export default function NavItemsWidget(props) {
 
     let attributeName = props['attributeName'];
     // let value = props['value'];

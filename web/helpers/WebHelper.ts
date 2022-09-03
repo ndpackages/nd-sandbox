@@ -5,15 +5,11 @@ import ArrayNestedHelper from "../../core/helpers/encoders/ArrayNestedHelper";
 export default class WebHelper {
 
     public static getParams(dataProvider: DataProvider) {
-        let params = UrlHelper.parseQueryParams(window.location.toString());
-        let map = ArrayNestedHelper.decode(params);
-
-        console.log(map);
-
+        let map = this.getParamsFromLocation();
         let values = {
             perPage: 20,
-            sort: params.sort ?? '',
-            sortDirection: params.sortDirection ?? 'asc',
+            sort: map['sort'] ?? '',
+            sortDirection: map['sortDirection'] ?? 'asc',
             filter: map['filter'] ?? {},
         };
         if (dataProvider && dataProvider.paginator.perPage) {
@@ -23,7 +19,9 @@ export default class WebHelper {
     }
 
     public static getParamsFromLocation() {
-
+        let params = UrlHelper.parseQueryParams(window.location.toString());
+        let map = ArrayNestedHelper.decode(params);
+        return map;
     }
 
     // public static setPageFavicon(url: string): void {

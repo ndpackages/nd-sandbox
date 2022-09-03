@@ -1,4 +1,7 @@
 import aesjs from'aes-js';
+import DeprecateHelper from "../../../../bundlesExt/tools/helpers/DeprecateHelper";
+
+DeprecateHelper.hardThrow();
 
 export default class HexHelper {
 

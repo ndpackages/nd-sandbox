@@ -1,4 +1,4 @@
-import BaseHasher from "../BaseHasher";
+import BaseHasher from "./BaseHasher";
 import pbkdf2 from "pbkdf2-sha256";
 
 export default class Pbkdf2Hasher extends BaseHasher {

@@ -1,4 +1,4 @@
-import BaseHasher from "../BaseHasher";
+import BaseHasher from "./BaseHasher";
 import HashAlgorithmEnum from "../../../enums/HashAlgorithmEnum";
 import Sha1Hasher from "./Sha1Hasher";
 import Sha256Hasher from "./Sha256Hasher";

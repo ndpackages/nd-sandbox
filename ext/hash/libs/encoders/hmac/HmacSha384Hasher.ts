@@ -1,13 +1,12 @@
 import HexEncoder from "../../../../baseX/libs/encoders/HexEncoder";
 import CryptoJS from "crypto-js";
-import BaseHasher from "../BaseHasher";
+import EncodeInterface from "../../../../../core/contract/encoders/EncodeInterface";
 
-export default class HmacSha384Hasher extends BaseHasher {
+export default class HmacSha384Hasher implements EncodeInterface {
 
     protected key;
 
     constructor(key) {
-        super();
         this.key = key;
     }
 

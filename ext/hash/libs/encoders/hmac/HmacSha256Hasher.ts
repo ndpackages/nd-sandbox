@@ -2,14 +2,13 @@ import {sha256} from "js-sha256";
 import HexEncoder from "../../../../baseX/libs/encoders/HexEncoder";
 import ConvHelper from "../../../../binary/helpers/ConvHelper";
 import CryptoJS from "crypto-js";
-import BaseHasher from "../BaseHasher";
+import EncodeInterface from "../../../../../core/contract/encoders/EncodeInterface";
 
-export default class HmacSha256Hasher extends BaseHasher {
+export default class HmacSha256Hasher implements EncodeInterface {
 
     protected key;
 
     constructor(key) {
-        super();
         this.key = key;
     }
 

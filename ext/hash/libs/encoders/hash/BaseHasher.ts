@@ -1,8 +1,8 @@
-import EncoderInterface from "../../../../core/contract/encoders/EncoderInterface";
 import _ from 'lodash';
 import hash from 'crypto-hashing';
+import EncodeInterface from "../../../../../core/contract/encoders/EncodeInterface";
 
-export default class BaseHasher implements EncoderInterface {
+export default class BaseHasher implements EncodeInterface {
 
     protected options = {};
 
@@ -16,9 +16,5 @@ export default class BaseHasher implements EncoderInterface {
 
     encode(sourceValue) {
         return hash(this.getAlgorithm(), sourceValue);
-    }
-
-    decode(encodedValue) {
-        throw new Error('Hash can not decode!');
     }
 }

@@ -1,10 +1,8 @@
 import EncoderInterface from "../../../../core/contract/encoders/EncoderInterface";
-import HashInterface from "../../../../core/contract/encoders/HashInterface";
 import _ from 'lodash';
 import hash from 'crypto-hashing';
-import HashAlgorithmEnum from "../../enums/HashAlgorithmEnum";
 
-export default class BaseHasher implements EncoderInterface, HashInterface {
+export default class BaseHasher implements EncoderInterface {
 
     protected options = {};
 
@@ -16,9 +14,9 @@ export default class BaseHasher implements EncoderInterface, HashInterface {
         _.set(this.options, name, value);
     }
 
-    hash(value) {
+    /*hash(value) {
         return this.encode(value);
-    }
+    }*/
 
     encode(sourceValue) {
         return hash(this.getAlgorithm(), sourceValue);

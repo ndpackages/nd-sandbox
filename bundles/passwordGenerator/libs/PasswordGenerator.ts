@@ -41,7 +41,7 @@ export default class PasswordGenerator {
 
     generate(host, login, nonce) {
         let url = this.forgeUrl(host, login, nonce);
-        let scopeHashHex = this._hasher.hash(url).toString('hex');
+        let scopeHashHex = this._hasher.encode(url).toString('hex');
         return this._generatePassword(scopeHashHex);
     }
 

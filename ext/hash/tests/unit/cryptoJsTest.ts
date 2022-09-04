@@ -14,6 +14,8 @@ import HmacRipemd160Hasher from "../../libs/encoders/hmac/HmacRipemd160Hasher";
 import HmacSha3Hasher from "../../libs/encoders/hmac/HmacSha3Hasher";
 import HmacSha224Hasher from "../../libs/encoders/hmac/HmacSha224Hasher";
 import HmacSha384Hasher from "../../libs/encoders/hmac/HmacSha384Hasher";
+import Sha224Hasher from "../../libs/encoders/hash/Sha224Hasher";
+import Sha384Hasher from "../../libs/encoders/hash/Sha384Hasher";
 
 tester.define('hash.hash', function () {
     let hash;
@@ -26,8 +28,14 @@ tester.define('hash.hash', function () {
     hash = (new Sha1Hasher()).encode(message);
     assert.isEqualHex('68f4145fee7dde76afceb910165924ad14cf0d00', hash);
 
+    hash = (new Sha224Hasher()).encode(message);
+    assert.isEqualHex('3dc6a3fd912b08bf15170296c4f1694f512ffa1dc9bddb8b9e1c8d38', hash);
+
     hash = (new Sha256Hasher()).encode(message);
     assert.isEqualHex('2f77668a9dfbf8d5848b9eeb4a7145ca94c6ed9236e4a773f6dcafa5132b2f91', hash);
+
+    hash = (new Sha384Hasher()).encode(message);
+    assert.isEqualHex('b526d8394134b853bd071719bc99d42b669bc9252baa82dcafabc1f322a3841c57cc0c82f080fd331b1666112b27a329', hash);
 
     hash = (new Sha512Hasher()).encode(message);
     assert.isEqualHex('4fb472dfc43def7a46ad442c58ac532f89e0c8a96f23b672f5fd637652eab158d4d589444ef7530a34e6626b40830b4e1ec5364611ae31c599bffa958e8b4c4e', hash);

@@ -1,7 +1,7 @@
 import tester from "../../../../../tool/test/domain/libs/tester";
 import assert from "../../../../../tool/test/domain/libs/assert";
 import BenchmarkHelper from "../../../../ext/tools/helpers/BenchmarkHelper";
-import Pbkdf2Hasher from "../../libs/hashers/hash/Pbkdf2Hasher";
+import Pbkdf2Hasher from "../../libs/encoders/hash/Pbkdf2Hasher";
 
 tester.define('hash.pbkdf2.encode.iterations-1.keyLen-64', function () {
 

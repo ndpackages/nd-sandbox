@@ -1,15 +1,19 @@
 import tester from "../../../../../tool/test/domain/libs/tester";
 import assert from "../../../../../tool/test/domain/libs/assert";
-import HmacSha256Hasher from "../../libs/hashers/hmac/HmacSha256Hasher";
-import HmacSha1Hasher from "../../libs/hashers/hmac/HmacSha1Hasher";
-import HmacMd5Hasher from "../../libs/hashers/hmac/HmacMd5Hasher";
-import HmacSha512Hasher from "../../libs/hashers/hmac/HmacSha512Hasher";
-import Md5Hasher from "../../libs/hashers/hash/Md5Hasher";
-import Sha1Hasher from "../../libs/hashers/hash/Sha1Hasher";
-import Sha512Hasher from "../../libs/hashers/hash/Sha512Hasher";
-import Sha256Hasher from "../../libs/hashers/hash/Sha256Hasher";
-import Sha3Hasher from "../../libs/hashers/hash/Sha3Hasher";
-import Ripemd160Hasher from "../../libs/hashers/hash/Ripemd160Hasher";
+import HmacSha256Hasher from "../../libs/encoders/hmac/HmacSha256Hasher";
+import HmacSha1Hasher from "../../libs/encoders/hmac/HmacSha1Hasher";
+import HmacMd5Hasher from "../../libs/encoders/hmac/HmacMd5Hasher";
+import HmacSha512Hasher from "../../libs/encoders/hmac/HmacSha512Hasher";
+import Md5Hasher from "../../libs/encoders/hash/Md5Hasher";
+import Sha1Hasher from "../../libs/encoders/hash/Sha1Hasher";
+import Sha512Hasher from "../../libs/encoders/hash/Sha512Hasher";
+import Sha256Hasher from "../../libs/encoders/hash/Sha256Hasher";
+import Sha3Hasher from "../../libs/encoders/hash/Sha3Hasher";
+import Ripemd160Hasher from "../../libs/encoders/hash/Ripemd160Hasher";
+import HmacRipemd160Hasher from "../../libs/encoders/hmac/HmacRipemd160Hasher";
+import HmacSha3Hasher from "../../libs/encoders/hmac/HmacSha3Hasher";
+import HmacSha224Hasher from "../../libs/encoders/hmac/HmacSha224Hasher";
+import HmacSha384Hasher from "../../libs/encoders/hmac/HmacSha384Hasher";
 
 tester.define('hash.hash', function () {
     let hash;
@@ -66,11 +70,23 @@ tester.define('hash.hmac', function () {
     hash = (new HmacMd5Hasher(key)).encode(message);
     assert.isEqualHex('5e03d0c1b42ef0b7e61fb333f3993949', hash);
 
+    hash = (new HmacRipemd160Hasher(key)).encode(message);
+    assert.isEqualHex('85eab2fe4383a869da13d51f4b91506924b1f821', hash);
+
     hash = (new HmacSha1Hasher(key)).encode(message);
     assert.isEqualHex('e90f713295ea4cc06c92c9248696ffafc5d01faf', hash);
 
+    hash = (new HmacSha3Hasher(key)).encode(message);
+    assert.isEqualHex('852995fe1c2a93663cf57456d406d35e6f81d299419e498cf108d96f2b2538b06f31702495a1057b945f7f53422b22a90209ec0fa15acad6262aa6867812f405', hash);
+
+    hash = (new HmacSha224Hasher(key)).encode(message);
+    assert.isEqualHex('59236d2047ae349e4aaddf08f75635dc88c75272e43423659ec0791a', hash);
+
     hash = (new HmacSha256Hasher(key)).encode(message);
     assert.isEqualHex('32c647602ab4c4c7543e9c50ae25e567c3354e1532b11649ce308e6e2568d205', hash);
+
+    hash = (new HmacSha384Hasher(key)).encode(message);
+    assert.isEqualHex('84b318cc0232a370c1f8b8746afcb575fc2debc680122c7422fd425638896d0dcf9e905b8cd9c1d7aed8d5439a2a2328', hash);
 
     hash = (new HmacSha512Hasher(key)).encode(message);
     assert.isEqualHex('c03f82cd6f9d03920d95caeedfa722d4e42325a18b049942ee5560787ad2aa394be6b95849c563ecdd37495726cd6236529a721b563b9778dd6119939bcab7e1', hash);

@@ -1,5 +1,5 @@
 import HashAlgorithmEnum from "../enums/HashAlgorithmEnum";
-import PolimorphicHasher from "../libs/hashers/hash/PolimorphicHasher";
+import PolimorphicHasher from "../libs/encoders/hash/PolimorphicHasher";
 
 export default class HashHelper {
 

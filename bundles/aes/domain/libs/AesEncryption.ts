@@ -8,7 +8,7 @@ import ConvHelper from "../../../../ext/binary/helpers/ConvHelper";
 import Uint8ArrayHelper from "../../../../ext/binary/helpers/Uint8ArrayHelper";
 import HexEncoder from "../../../../ext/baseX/libs/encoders/HexEncoder";
 import CryptoJS from "crypto-js";
-import HmacSha256Hasher from "../../../../ext/hash/libs/hashers/hmac/HmacSha256Hasher";
+import HmacSha256Hasher from "../../../../ext/hash/libs/encoders/hmac/HmacSha256Hasher";
 
 // var hash = require('hash.js');
 

@@ -2,8 +2,14 @@ import AesDataEntity from "../entities/AesDataEntity";
 import * as crypto from "crypto";
 import Utf8Encoder from "../../../../ext/string/libs/encoders/Utf8Encoder";
 import aesjs from 'aes-js';
+// import hash from 'hash.js';
+import {sha256} from 'js-sha256';
+import ConvHelper from "../../../../ext/binary/helpers/ConvHelper";
+import Uint8ArrayHelper from "../../../../ext/binary/helpers/Uint8ArrayHelper";
+import HexEncoder from "../../../../ext/baseX/libs/encoders/HexEncoder";
+import CryptoJS from "crypto-js";
 
-var hash = require('hash.js');
+// var hash = require('hash.js');
 
 // https://www.npmjs.com/package/aes-js
 
@@ -48,14 +54,48 @@ export default class AesEncryption {
         return decryptedBytes;
     }
 
+    /*protected generateHmacByHashJs(message, key) {
+        let arr = hash
+            .hmac(hash.sha256)
+            .update(key)
+            .update(message)
+            .digest();
+        return arr;
+    }*/
+
+    protected generateHmacByCryptoJS(message, key) {
+        let hashHex = CryptoJS.HmacSHA256(message, key).toString(CryptoJS.enc.Hex);
+        let hash = (new HexEncoder()).decode(hashHex);
+        return hash;
+    }
+
+    protected generateHmacBySha256Js(message, key) {
+        let hashHex = sha256.hmac(key, message);
+        let hash = (new HexEncoder()).decode(hashHex);
+        return hash;
+    }
+
     protected generateHmac(message) {
+
+        // message = 'Message';
+        // let key = 'Secret Passphrase';
+        let key = this.keyEntity.hmacKey;
+
+        let arr = this.generateHmacBySha256Js(message, key);
+        let str = (new HexEncoder()).encode(arr);
+        // console.log(arr, str);
+
+        return new Uint8Array(arr);
+    }
+
+    /*protected generateHmac222(message) {
         let arr = hash
             .hmac(hash.sha256)
             .update(this.keyEntity.hmacKey)
             .update(message)
             .digest();
         return new Uint8Array(arr);
-    }
+    }*/
 
     protected checkMac(decryptedData, recipientMacBuffer): void {
         if (this.isCheckMac === false) {

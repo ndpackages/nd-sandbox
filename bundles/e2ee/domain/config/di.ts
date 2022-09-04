@@ -6,7 +6,9 @@ import HandShakeRepository from "../repositories/p2p/HandShakeRepository";
 import SessionService from "../services/SessionService";
 import TunnelService from "../services/TunnelService";
 import HandShakeController from "../../p2p/controllers/HandShakeController";
-var crypto = require('diffie-hellman/browser');
+import crypto from 'diffie-hellman/browser';
+
+// var crypto = require('diffie-hellman/browser');
 
 export default function configureDi(domainName) {
     let bundleDiConfigurator = diConfigurator.createInstance(domainName);

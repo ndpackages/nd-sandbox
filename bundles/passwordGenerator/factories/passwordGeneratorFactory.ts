@@ -1,6 +1,6 @@
 import PasswordGenerator from "../libs/PasswordGenerator";
 import ChainHashV2 from "../../../../crypto/encode/domain/libs/chainHash/ChainHashV2";
-import HashAlgorithmEnum from "../../../../crypto/encode/domain/enums/HashAlgorithmEnum";
+import HashAlgorithmEnum from "../../../ext/hash/enums/HashAlgorithmEnum";
 import PasswordStrengthEnum from "../enums/PasswordStrengthEnum";
 import PasswordEncoder from "../libs/PasswordEncoder";
 import Pbkdf2ChainHash from "../../../../crypto/encode/domain/libs/chainHash/Pbkdf2ChainHash";

@@ -1,10 +1,10 @@
 import {sha256} from "js-sha256";
-import HexEncoder from "../../../baseX/libs/encoders/HexEncoder";
-import ConvHelper from "../../../binary/helpers/ConvHelper";
+import HexEncoder from "../../../../baseX/libs/encoders/HexEncoder";
+import ConvHelper from "../../../../binary/helpers/ConvHelper";
 import CryptoJS from "crypto-js";
-import BaseHasher from "./BaseHasher";
+import BaseHasher from "../BaseHasher";
 
-export default class Sha256HmacHasher extends BaseHasher {
+export default class HmacSha256Hasher extends BaseHasher {
 
     protected key;
 

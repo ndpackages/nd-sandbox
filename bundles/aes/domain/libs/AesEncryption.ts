@@ -8,7 +8,7 @@ import ConvHelper from "../../../../ext/binary/helpers/ConvHelper";
 import Uint8ArrayHelper from "../../../../ext/binary/helpers/Uint8ArrayHelper";
 import HexEncoder from "../../../../ext/baseX/libs/encoders/HexEncoder";
 import CryptoJS from "crypto-js";
-import Sha256HmacHasher from "../../../../ext/hash/libs/hashers/Sha256HmacHasher";
+import HmacSha256Hasher from "../../../../ext/hash/libs/hashers/hmac/HmacSha256Hasher";
 
 // var hash = require('hash.js');
 
@@ -77,7 +77,7 @@ export default class AesEncryption {
     }*/
 
     protected generateHmacBySha256HmacHasher(message, key) {
-        let hasher = new Sha256HmacHasher(key);
+        let hasher = new HmacSha256Hasher(key);
         return hasher.encode(message);
     }
 

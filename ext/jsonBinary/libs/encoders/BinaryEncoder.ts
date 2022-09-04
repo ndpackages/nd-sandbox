@@ -3,6 +3,13 @@ import ObjectHelper from "../../../object/helpers/ObjectHelper";
 import EncodeHelper from "../../../encoders/helpers/EncodeHelper";
 import BinaryEncoderHandler from "../BinaryEncoderHandler";
 
+/**
+ * Кодировщик для экранирования бинарных данных.
+ *
+ * Используется для предварительной обработки перед сериализацией.
+ * Бинарные данные кодирует в формат HEX и добавляет к имени суффикс.
+ * Пример имени: "myVar:[Uint8Array]".
+ */
 export default class BinaryEncoder implements EncoderInterface {
 
     encode(sourceValue) {

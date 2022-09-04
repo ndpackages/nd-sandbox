@@ -1,5 +1,5 @@
 import EncoderInterface from "../../../../core/contract/encoders/EncoderInterface";
-import ObjectBinaryEncoder from "./ObjectBinaryEncoder";
+import BinaryEncoder from "./BinaryEncoder";
 import ChainEncoder from "../../../encoders/libs/encoders/ChainEncoder";
 import JsonEncoder from "../../../json/libs/encoders/JsonEncoder";
 
@@ -7,7 +7,7 @@ export default class JsonBinaryEncoder extends ChainEncoder implements EncoderIn
 
     constructor() {
         let encoders = [
-            new ObjectBinaryEncoder(),
+            new BinaryEncoder(),
             new JsonEncoder(),
         ];
         super(encoders);

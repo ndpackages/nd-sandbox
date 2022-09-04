@@ -1,10 +1,7 @@
-import ConvHelper from "../../../binary/helpers/ConvHelper";
-import EncoderInterface from "../../../../core/contract/encoders/EncoderInterface";
-import ObjectHelper from "../../../object/helpers/ObjectHelper";
-import EncodeHelper from "../../../encoders/helpers/EncodeHelper";
-import HexEncoder from "../../../baseX/libs/encoders/HexEncoder";
+import HexEncoder from "../../baseX/libs/encoders/HexEncoder";
+import ConvHelper from "../../binary/helpers/ConvHelper";
 
-class Handler {
+export default class BinaryEncoderHandler {
 
     encode(obj, property) {
         let value = obj[property];
@@ -35,22 +32,5 @@ class Handler {
             obj[name] = value;
             delete obj[property];
         }
-    }
-}
-
-let handler = new Handler();
-
-export default class ObjectBinaryEncoder implements EncoderInterface {
-
-    encode(sourceValue) {
-        let cloneValue = EncodeHelper.isolateValue(sourceValue);
-        ObjectHelper.iterate(cloneValue, handler.encode);
-        return cloneValue;
-    }
-
-    decode(encodedValue) {
-        let cloneValue = EncodeHelper.isolateValue(encodedValue);
-        ObjectHelper.iterate(cloneValue, handler.decode);
-        return cloneValue;
     }
 }

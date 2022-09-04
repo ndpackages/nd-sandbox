@@ -1,5 +1,4 @@
 import container from "../../../../core/container/singletons/container";
-import config from "../../../../../app/common/config/config";
 import configManager from "../../../../core/configManager/singletons/configManager";
 
 export default class LanguageService {

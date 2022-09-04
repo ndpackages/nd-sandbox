@@ -1,7 +1,6 @@
 import _ from "lodash";
 import ArrayNestedHelper from "../../array/ArrayNestedHelper";
 import ArrayHelper from "../../array/ArrayHelper";
-import config from "../../../../app/common/config/config";
 import RouterTypeEnum from "../../../../app/common/domain/enums/RouterTypeEnum";
 import configManager from "../../../core/configManager/singletons/configManager";
 

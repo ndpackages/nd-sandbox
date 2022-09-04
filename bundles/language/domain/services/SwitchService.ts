@@ -1,7 +1,6 @@
 import container from "../../../../core/container/singletons/container";
 import i18next from "i18next";
 import i18n from "i18next";
-import config from "../../../../../app/common/config/config";
 import {initReactI18next} from "react-i18next";
 import i18nextConfigurator from "../../../i18next/domain/singletons/i18nextConfigurator";
 import configManager from "../../../../core/configManager/singletons/configManager";

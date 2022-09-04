@@ -9,9 +9,9 @@ export default class Sha512Hasher extends BaseHasher {
         return HashAlgorithmEnum.SHA512;
     }
 
-    encode(sourceValue) {
+    /*encode(sourceValue) {
         let hashHex = CryptoJS.SHA512(sourceValue).toString(CryptoJS.enc.Hex);
         let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
-    }
+        return new Uint8Array(hash);
+    }*/
 }

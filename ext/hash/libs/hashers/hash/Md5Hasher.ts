@@ -9,9 +9,9 @@ export default class Md5Hasher extends BaseHasher {
         return HashAlgorithmEnum.MD5;
     }
 
-    encode(sourceValue) {
+    /*encode(sourceValue) {
         let hashHex = CryptoJS.MD5(sourceValue).toString(CryptoJS.enc.Hex);
         let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
-    }
+        return new Uint8Array(hash);
+    }*/
 }

@@ -9,9 +9,9 @@ export default class Ripemd160Hasher extends BaseHasher {
         return HashAlgorithmEnum.RIPEMD160;
     }
 
-    encode(sourceValue) {
+    /*encode(sourceValue) {
         let hashHex = CryptoJS.RIPEMD160(sourceValue).toString(CryptoJS.enc.Hex);
         let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
-    }
+        return new Uint8Array(hash);
+    }*/
 }

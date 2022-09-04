@@ -17,5 +17,6 @@ export default class Pbkdf2Hasher extends BaseHasher {
     encode(key) {
         let encoded = pbkdf2(key, this.salt, this.iterations, this.keyLenBytes);
         return encoded;
+        // return new Uint8Array(encoded);
     }
 }

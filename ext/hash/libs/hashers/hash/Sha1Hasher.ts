@@ -9,9 +9,9 @@ export default class Sha1Hasher extends BaseHasher {
         return HashAlgorithmEnum.SHA1;
     }
 
-    encode(sourceValue) {
+    /*encode(sourceValue) {
         let hashHex = CryptoJS.SHA1(sourceValue).toString(CryptoJS.enc.Hex);
         let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
-    }
+        return new Uint8Array(hash);
+    }*/
 }

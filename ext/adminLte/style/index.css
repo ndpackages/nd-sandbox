@@ -1,4 +1,6 @@
 
+@import '../../../../../node_modules/admin-lte/dist/css/adminlte.min.css';
+
 .bg-light-grey {
     background-color: #eee;
 }

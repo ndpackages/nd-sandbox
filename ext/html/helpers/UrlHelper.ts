@@ -3,6 +3,7 @@ import ArrayNestedHelper from "../../array/ArrayNestedHelper";
 import ArrayHelper from "../../array/ArrayHelper";
 import config from "../../../../app/common/config/config";
 import RouterTypeEnum from "../../../../app/common/domain/enums/RouterTypeEnum";
+import configManager from "../../../core/configManager/singletons/configManager";
 
 export default class UrlHelper {
 
@@ -12,9 +13,11 @@ export default class UrlHelper {
 
         let resultUri;
 
-        if(config.router.type === RouterTypeEnum.HASH) {
+        let routerType = configManager.get('router.type');
+
+        if(routerType === RouterTypeEnum.HASH) {
             resultUri = '/#/' + pureUri;
-        } else if(config.router.type === RouterTypeEnum.SLASH) {
+        } else if(routerType === RouterTypeEnum.SLASH) {
             resultUri = '/' + pureUri;
         }
 

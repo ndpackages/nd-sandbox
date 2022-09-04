@@ -4,6 +4,7 @@ import i18n from "i18next";
 import config from "../../../../../app/common/config/config";
 import {initReactI18next} from "react-i18next";
 import i18nextConfigurator from "../../../i18next/domain/singletons/i18nextConfigurator";
+import configManager from "../../../../core/configManager/singletons/configManager";
 
 export default class SwitchService {
 
@@ -38,7 +39,8 @@ export default class SwitchService {
 
     _getLocale() {
         let currentLocale = container.get('language.repositories.storage.locale').getLocale();
-        currentLocale = currentLocale ? currentLocale : (config.language.default ?? 'en');
+        let defaultLanguage = configManager.get('language.default');
+        currentLocale = currentLocale ? currentLocale : (defaultLanguage ?? 'en');
         return currentLocale;
     }
 

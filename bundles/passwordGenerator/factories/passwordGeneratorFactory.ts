@@ -1,10 +1,10 @@
 import PasswordGenerator from "../libs/PasswordGenerator";
 import ChainHashV2 from "../../../../crypto/encode/domain/libs/chainHash/ChainHashV2";
-import HashAlgorithmEnum from "../../../ext/hash/enums/HashAlgorithmEnum";
 import PasswordStrengthEnum from "../enums/PasswordStrengthEnum";
 import PasswordEncoder from "../libs/PasswordEncoder";
 import Pbkdf2ChainHash from "../../../../crypto/encode/domain/libs/chainHash/Pbkdf2ChainHash";
 import HashHelper from "../../../ext/hash/helpers/HashHelper";
+import Sha256Hasher from "../../../ext/hash/libs/encoders/hash/Sha256Hasher";
 
 class PasswordGeneratorFactory {
 
@@ -23,7 +23,7 @@ class PasswordGeneratorFactory {
     }
 
     createInstance18kSha256(masterKey, passwordLength) {
-        return this.createInstance(masterKey, passwordLength, 18000, HashAlgorithmEnum.SHA256);
+        return this.createInstance(masterKey, passwordLength, 18000, new Sha256Hasher());
     }
 
     createInstance18kPbkdf2(masterKey, passwordLength) {

@@ -10,6 +10,4 @@ export default class HashAlgorithmEnum {
     static readonly RIPEMD160 = 'ripemd160';
     static readonly MD5 = 'md5';
 
-    static readonly SHA256_X2 = 'sha256.x2';
-
 }

@@ -1,7 +1,6 @@
-export default interface EncoderInterface {
+import EncodeInterface from "./EncodeInterface";
+import DecodeInterface from "./DecodeInterface";
 
-    encode(sourceValue);
-
-    decode(encodedValue);
+export default interface EncoderInterface extends EncodeInterface, DecodeInterface {
 
 }

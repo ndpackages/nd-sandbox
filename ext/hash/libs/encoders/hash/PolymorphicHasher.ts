@@ -10,7 +10,7 @@ import _ from 'lodash';
 import Sha384Hasher from "./Sha384Hasher";
 import Sha224Hasher from "./Sha224Hasher";
 
-export default class PolimorphicHasher extends BaseHasher {
+export default class PolymorphicHasher extends BaseHasher {
 
     protected classMap: object = {};
     protected algorithm: string;
@@ -18,7 +18,7 @@ export default class PolimorphicHasher extends BaseHasher {
     constructor(algorithm: string, classMap: object = {}) {
         super();
         this.algorithm = algorithm;
-        let allClassMap = PolimorphicHasher.getDefaultClassMap();
+        let allClassMap = PolymorphicHasher.getDefaultClassMap();
         if (!_.isEmpty(classMap)) {
             allClassMap = _.merge(allClassMap, classMap);
         }

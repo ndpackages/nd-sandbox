@@ -1,15 +1,15 @@
 import HashAlgorithmEnum from "../enums/HashAlgorithmEnum";
-import PolimorphicHasher from "../libs/encoders/hash/PolimorphicHasher";
+import PolymorphicHasher from "../libs/encoders/hash/PolymorphicHasher";
 
 export default class HashHelper {
 
     static hash(algorithm, value) {
-        let hasher = new PolimorphicHasher(algorithm);
+        let hasher = new PolymorphicHasher(algorithm);
         return hasher.encode(value);
     }
 
     static createHasherByAlgorithm(algorithm) {
-        let hasher = new PolimorphicHasher(algorithm);
+        let hasher = new PolymorphicHasher(algorithm);
         return hasher.getHasherInstance();
     }
 

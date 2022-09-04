@@ -1,17 +1,19 @@
 import tester from "../../../../../tool/test/domain/libs/tester";
-import pbkdf2 from "pbkdf2-sha256";
 import assert from "../../../../../tool/test/domain/libs/assert";
 import BenchmarkHelper from "../../../../ext/tools/helpers/BenchmarkHelper";
+import Pbkdf2Hasher from "../../libs/hashers/hash/Pbkdf2Hasher";
 
-/*tester.define('hash.pbkdf2.encode.iterations-1.keyLen-64', function () {
+tester.define('hash.pbkdf2.encode.iterations-1.keyLen-64', function () {
 
     let key = 'passwd';
     let salt = 'salt';
     let iterations = 1;
     let keyLenBytes = 64;
 
+    let hasher = new Pbkdf2Hasher(salt, iterations, keyLenBytes);
+
     BenchmarkHelper.start('pbkdf2');
-    let encoded = pbkdf2(key, salt, iterations, keyLenBytes);
+    let encoded = hasher.encode(key);
     let runtime = BenchmarkHelper.end('pbkdf2');
 
     assert.lessThan(0.02, runtime);
@@ -26,11 +28,13 @@ tester.define('hash.pbkdf2.encode.iterations-10.keyLen-64', function () {
     let iterations = 10000;
     let keyLenBytes = 64;
 
+    let hasher = new Pbkdf2Hasher(salt, iterations, keyLenBytes);
+
     BenchmarkHelper.start('pbkdf2');
-    let encoded = pbkdf2(key, salt, iterations, keyLenBytes);
+    let encoded = hasher.encode(key);
     let runtime = BenchmarkHelper.end('pbkdf2');
 
     assert.lessThan(0.9, runtime);
     assert.greaterThan(0.1, runtime);
     assert.isEqualHex('891ba7f6f871dbadd932fa3b35a3a07054eadd85b47aa470399b3521aaa5b6868fe92c4a135ba72058d7e1cc8207cc0a53f398b842db10196ffc1adfe6cac738', encoded);
-});*/
+});

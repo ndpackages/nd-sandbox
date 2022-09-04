@@ -1,7 +1,5 @@
-import CryptoJS from "crypto-js";
 import tester from "../../../../../tool/test/domain/libs/tester";
 import assert from "../../../../../tool/test/domain/libs/assert";
-import ConvHelper from "../../../../ext/binary/helpers/ConvHelper";
 import HmacSha256Hasher from "../../libs/hashers/hmac/HmacSha256Hasher";
 import HmacSha1Hasher from "../../libs/hashers/hmac/HmacSha1Hasher";
 import HmacMd5Hasher from "../../libs/hashers/hmac/HmacMd5Hasher";

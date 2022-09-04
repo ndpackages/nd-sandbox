@@ -12,7 +12,6 @@ export default class HmacSha1Hasher implements EncodeInterface {
 
     encode(sourceValue) {
         let hashHex = CryptoJS.HmacSHA512(sourceValue, this.key).toString(CryptoJS.enc.Hex);
-        let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
+        return (new HexEncoder()).decode(hashHex);
     }
 }

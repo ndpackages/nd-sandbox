@@ -14,17 +14,16 @@ export default class HmacSha256Hasher implements EncodeInterface {
 
     encode(sourceValue) {
         return this.generateHmacBySha256Js(sourceValue, this.key);
+        // return this.generateHmacByCryptoJS(sourceValue, this.key);
     }
 
     protected generateHmacBySha256Js(message, key) {
         let hashHex = sha256.hmac(key, message);
-        let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
+        return (new HexEncoder()).decode(hashHex);
     }
 
     protected generateHmacByCryptoJS(message, key) {
         let hashHex = CryptoJS.HmacSHA256(message, ConvHelper.toHex(key)).toString(CryptoJS.enc.Hex);
-        let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
+        return (new HexEncoder()).decode(hashHex);
     }
 }

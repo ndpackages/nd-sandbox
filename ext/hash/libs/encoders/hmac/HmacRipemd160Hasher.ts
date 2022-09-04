@@ -11,8 +11,7 @@ export default class HmacRipemd160Hasher implements EncodeInterface {
     }
 
     encode(sourceValue) {
-        let hashHex = CryptoJS.RIPEMD160(sourceValue, this.key).toString(CryptoJS.enc.Hex);
-        let hash = (new HexEncoder()).decode(hashHex);
-        return hash;
+        let hashHex = CryptoJS.HmacRIPEMD160(sourceValue, this.key).toString(CryptoJS.enc.Hex);
+        return (new HexEncoder()).decode(hashHex);
     }
 }

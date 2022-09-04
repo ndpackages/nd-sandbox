@@ -79,7 +79,7 @@ tester.define('hash.hmac', function () {
     assert.isEqualHex('5e03d0c1b42ef0b7e61fb333f3993949', hash);
 
     hash = (new HmacRipemd160Hasher(key)).encode(message);
-    assert.isEqualHex('85eab2fe4383a869da13d51f4b91506924b1f821', hash);
+    assert.isEqualHex('d1b4088aba7f4897444c1423c0b1f056605473ab', hash);
 
     hash = (new HmacSha1Hasher(key)).encode(message);
     assert.isEqualHex('e90f713295ea4cc06c92c9248696ffafc5d01faf', hash);

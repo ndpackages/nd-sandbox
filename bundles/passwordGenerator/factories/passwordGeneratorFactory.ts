@@ -4,7 +4,7 @@ import HashAlgorithmEnum from "../../../ext/hash/enums/HashAlgorithmEnum";
 import PasswordStrengthEnum from "../enums/PasswordStrengthEnum";
 import PasswordEncoder from "../libs/PasswordEncoder";
 import Pbkdf2ChainHash from "../../../../crypto/encode/domain/libs/chainHash/Pbkdf2ChainHash";
-import HashHelper from "../../../../crypto/encode/domain/helpers/HashHelper";
+import HashHelper from "../../../ext/hash/helpers/HashHelper";
 
 class PasswordGeneratorFactory {
 

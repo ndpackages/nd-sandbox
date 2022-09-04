@@ -1,4 +1,4 @@
-import HashHelper from "../../../../crypto/encode/domain/helpers/HashHelper";
+import HashHelper from "../../../ext/hash/helpers/HashHelper";
 import basex from 'base-x';
 import AlphabetEnum from "../../../ext/baseX/enums/AlphabetEnum";
 
